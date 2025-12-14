@@ -1,3 +1,2 @@
-Django==4.x.x
+Django==4.2.10
 gunicorn
-# plus any other packages your app uses
