@@ -1,0 +1,480 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trysha Benitez | Portfolio</title>
+
+    <!-- CORRECT CSS PATH -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <!-- Sticky Navbar -->
+    <nav id="stickyNavbar" class="sticky-navbar">
+        <!-- Profile image button -->
+        <div class="hero-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+            <img src="{% static 'images/navbar_id.png' %}" alt="Profile">
+        </div>
+
+        <!-- Nav buttons -->
+        <div class="nav-buttons">
+            <button id="btn-about" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })">ABOUT</button>
+            <button id="btn-skills" onclick="document.getElementById('skills').scrollIntoView({ behavior: 'smooth' })">SKILLS</button>
+            <button id="btn-projects" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">PROJECT</button>
+            <button id="btn-resume" onclick="document.getElementById('resume').scrollIntoView({ behavior: 'smooth' })">EDUCATION</button>
+        </div>
+
+    </nav>
+
+
+
+    <section class="hero-section">
+
+        <div class="text-content">
+            <p class="intro">Hi, I'm</p>
+            <h1 class="name">Trysha Rhoy Benitez</h1>
+            <p class="tagline">Computer Engineering Technology Student</p>
+
+            <div class="nav-buttons">
+                <button onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })">ABOUT</button>
+                <button id="btn-skills" onclick="document.getElementById('skills').scrollIntoView({ behavior: 'smooth' })">SKILLS</button>
+                <button id="btn-projects" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">PROJECT</button>
+                <button id="btn-resume" onclick="document.getElementById('resume').scrollIntoView({ behavior: 'smooth' })">EDUCATION</button>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com/beniteztrysha/" target="_blank">
+                    <img src="{% static 'images/facebook.png' %}" class="icon">
+                </a>
+                <a href="#"><img src="{% static 'images/email.png' %}" class="icon"></a>
+                <a href="https://github.com/tryshabenitez/" target="_blank">
+                    <img src="{% static 'images/github.png' %}" class="icon"></a>
+            </div>
+        </div>
+
+        <div class="id-card-container">
+            <div class="lanyard"></div>
+             <div class="id-card" id="draggableCard">
+                <img src="{% static 'images/front_id.png' %}" class="front">
+            </div>
+        </div>
+
+    </section>
+
+    <section id="about" class="about-section">
+
+        <div class="about-container">
+
+            <!-- LEFT COLUMN (title + image stacked) -->
+            <div class="left-column">
+                <div class="about-title-left">
+                    <h3>Who is Trysha?</h3>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="about-image">
+                    <img src="{% static 'images/about-image.png' %}" alt="Trysha Benitez">
+                </div>
+            </div>
+
+            <!-- RIGHT TEXT -->
+            <div class="about-text">
+                <h2>Aspiring <span>software developer</span> from <strong>Philippines</strong></h2>
+
+                <p class="subtitle">
+                    <b>In my first year of studying Computer Engineering Technology, I often felt out of place, 
+                    I feel like I belong to somwhre else, but everything clicked during a coding lab when I solved my first logic problem on our laboratory task. 
+                    The joy that I felt was so unreal. I mean, If I look back, it was just a basic if else condition. That moment sparked my interest in programming, and since then, 
+                    I’ve been excited to create and learn more with code.</b>
+                </p>
+
+                <div class="about-info">
+                    <p><b><span>➤ </span>Phone:</b> +639918283459</p>
+                    <p><b><span>➤ </span>Collage Level:</b> 4th year college</p>
+                    <p><b><span>➤ </span>City:</b> Cavite</p>
+                    <p><b><span>➤ </span>E-mail:</b> twisyabenitez@gmail.com</p>
+                </div>
+
+                <p class="about-desc">
+                    <b>If I were to illustrate it, I have a love-hate relationship with coding. 
+                    I sometimes struggle with not knowing everything, spending hours debugging, 
+                    or trying to understand the full flow of a software or project I’m working on. 
+                    But the love comes every time I finish a task, the satisfaction of seeing a well-functioning output. 
+                    Even something as simple as a button with a highlighted hover can make me proud of myself. 
+                    That moment realizing I turned an idea into a working result makes me want to keep learning and growing as a programmer.</b>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- TRYSHa INTEREST (FULL WIDTH, BELOW ABOUT) -->
+        <div class="about-interest">
+            <div class="about-title-left">
+                <h3>Trysha’s Interest</h3>
+                <div class="underline"></div>
+            </div>
+
+            <div class="interest-grid">
+
+                <div class="interest-item">
+                    <img src="{% static 'images/interests/movies.png' %}" alt="Watching Movies">
+                    <span><b>Watching Movies</b></span>
+                </div>
+
+                <div class="interest-item">
+                    <img src="{% static 'images/interests/games.png' %}" alt="Online Games">
+                    <span><b>Online Games</b></span>
+                </div>
+
+                <div class="interest-item">
+                    <img src="{% static 'images/interests/music.png' %}" alt="Listening to Music">
+                    <span><b>Listening to Music</b></span>
+                </div>
+
+                <div class="interest-item">
+                    <img src="{% static 'images/interests/editing.png' %}" alt="Editing">
+                    <span><b>Editing</b></span>
+                </div>
+
+                <div class="interest-item">
+                    <img src="{% static 'images/interests/reading.png' %}" alt="Reading">
+                    <span><b>Reading</b></span>
+                </div>
+
+                <div class="interest-item">
+                    <img src="{% static 'images/interests/chess.png' %}" alt="Playing Chess">
+                    <span><b>Playing Chess</b></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="skills" class="skills-section">
+
+        <!-- TITLE -->
+        <div class="skills-title">
+            <h3>Trysha’s Skill</h3>
+            <div class="underline"></div>
+        </div>
+
+        <!-- CAROUSEL -->
+        <div class="skills-carousel">
+            <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel-track">
+
+                <div class="skill-card">
+                    <img src="{% static 'images/skills/python.png' %}" alt="Python">
+                    <h4>My first step into programming</h4>
+                    <p><span class="highlight">Python</span> was the very first 
+                        programming language I learned in my <span class="highlight">first year of college</span>. 
+                        Since then, it has been my go-to language for various projects. I frequently use Python 
+                        to build applications, solve problems, and experiment with new ideas,
+                        making it the foundation of my programming journey.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="{% static 'images/skills/c.png' %}" alt="C">
+                    <h4>Diving into structured programming</h4>
+                    <p><span class="highlight">C++</span> was the second programming language I learned, starting in my <b>second year of college</b>. 
+                        I mainly used it in my electrical engineering subjects, where it helped me understand structured 
+                        programming and problem-solving. One of my memorable projects was a <span class="highlight">robotic car hand</span>, where I 
+                        programmed using C++ with an <span class="highlight">Arduino Uno</span>. I also got hands-on experience with 
+                        <span class="highlight">Raspberry Pi</span> in some mini tasks, which strengthened my 
+                        practical coding skills in <b>embedded systems</b>.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="{% static 'images/skills/html.png' %}" alt="HTML">
+                    <h4>Building the backbone of the web</h4>
+                    <p>I first encountered <span class="highlight">HTML</span> in 
+                        my <span class="highlight">third year of college</span> during the first semester. 
+                        Since then, I’ve been using it consistently—from creating my very first web page to building full projects. 
+                        With hands-on experience, I can confidently structure web pages, organize content, and implement semantic 
+                        elements to create user-friendly websites.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="{% static 'images/skills/css.png' %}" alt="CSS">
+                    <h4>Bringing style to structure</h4>
+                    <p><span class="highlight">CSS</span> came along the same time as HTML, and it’s been my way to make websites actually look good. 
+                        I’ve experimented with <span class="highlight">colors, fonts, layouts, and responsive designs</span>, 
+                        turning plain pages into visually appealing experiences. Over time, 
+                        I’ve learned how to balance style and functionality, making sure my websites not only look 
+                        nice but also feel smooth and user-friendly.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="{% static 'images/skills/javascript.png' %}" alt="JAVA">
+                    <h4>Making web pages interactive</h4>
+                    <p>I started learning <span class="highlight">JavaScript</span> alongside HTML and CSS—it was like a 
+                        trio that opened up the world of web development for me. Since then, 
+                        I’ve used JavaScript in multiple projects to bring pages to life. 
+                        Some examples include creating a <span class="highlight">countdown timer</span> for a “Forgot Password” page, 
+                        building a <span class="highlight">carousel of cards</span>, designing an
+                         <span class="highlight">interactive ID</span>, and implementing <b>pop-up messages</b>. 
+                        JavaScript has been my tool to make web apps dynamic and engaging.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="{% static 'images/skills/api.png' %}" alt="API">
+                    <h4>Connecting apps with the world</h4>
+                    <p>I’ve worked with <span class="highlight">APIs</span> to make web applications more functional. 
+                        For my group thesis, I integrated an authentication API to 
+                        allow users to <span class="highlight">sign in with their Google accounts</span>. 
+                        I even customized the function so that only registered emails could log in, 
+                        ensuring security while making the process convenient for users..</p>
+                </div>
+                <div class="skill-card">
+                    <img src="{% static 'images/skills/deploy.png' %}" alt="DEP">
+                    <h4>Taking projects live</h4>
+                    <p>I’ve <span class="highlight">deployed websites online</span> using platforms like <span class="highlight">Railway</span>, 
+                        connecting them to databases and ensuring everything runs smoothly. 
+                        I’ve also worked with <span class="highlight">domains from GoDaddy</span>, linking them to the 
+                        websites so that they are fully accessible to users. 
+                        This experience taught me how to bring a project from 
+                        local development to a real-world, live environment.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="{% static 'images/skills/google.png' %}" alt="GOOGLE">
+                    <h4>Making websites discoverable</h4>
+                    <p>I have experience using <span class="highlight">Google Search Console</span> to make websites 
+                        <span class="highlight">searchable and visible on Google</span>. For example, in the 
+                        TUPCLiraya web app, I submitted the site, monitored its performance, 
+                        and ensured that when users searched “TUPC Liraya,” 
+                        the website would appear in the results. 
+                        This gave me practical knowledge of website 
+                        discoverability and basic SEO practices.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="{% static 'images/skills/microsoft.png' %}" alt="MCR">
+                    <h4>Visualizing how data move</h4>
+                    <p>I regularly use Microsoft Word, Excel, and PowerPoint
+                        throughout my academic journey. I use <span class="highlight">Word for documentation</span> such as reports, 
+                        system descriptions, and thesis-related papers. <span class="highlight">Excel helps me organize data</span>, 
+                        track information, and create tables for projects. With <span class="highlight">PowerPoint</span>, 
+                        I design clear and <span class="highlight">engaging presentations</span> for project defenses, 
+                        reports, and discussions, making sure my ideas are easy to understand and well-presented.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="{% static 'images/skills/flowchart.png' %}" alt="FLOWCHART">
+                    <h4>Mapping ideas before building</h4>
+                    <p>I started learning how to create <span class="highlight">flowcharts</span> during my third-year web development projects. 
+                        One of the major times I used them was in my group thesis, where I 
+                        relied on <span class="highlight">Lucidchart</span> to plan and visualize the project. 
+                        Creating flowcharts taught me the importance of organizing ideas clearly and understanding the 
+                        step-by-step process before diving into development.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="{% static 'images/skills/dfd.png' %}" alt="DFD">
+                    <h4>Visualizing how data move</h4>
+                    <p>I became familiar with <span class="highlight">DFDs</span> in my second year of college, 
+                        and they quickly became an essential tool for my projects. 
+                        I was often responsible for creating DFDs, including in my group thesis, using <span class="highlight">Visual Paradigm</span>. 
+                        It helped me understand how data flows through a system and how to plan applications 
+                        effectively before starting development.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="{% static 'images/skills/github.png' %}" alt="GIT">
+                    <h4>Version control and collaboration</h4>
+                    <p>I use <span class="highlight">GitHub</span> for version control and team collaboration in group projects and my thesis, 
+                        including <span class="highlight">TUPCLiraya</span>, <span class="highlight">Bayanihire</span>, 
+                        and <span class="highlight">Findrary</span>. It allowed us to manage frequent 
+                        code updates, avoid conflicts, and work efficiently as a team, making 
+                        collaborative development more organized and reliable..</p>
+                </div>
+                <div class="skill-card">
+                    <img src="{% static 'images/skills/wireframe.png' %}" alt="WIRE">
+                    <h4>Visualizing the frontend layout</h4>
+                    <p>I create wireframes using <span class="highlight">Canva</span>, <span class="highlight">Figma</span>, 
+                        and <span class="highlight">Balsamiq</span> to visualize the frontend layout of an application. 
+                        This helps me identify the placement of buttons, sections, and 
+                        important user interactions before implementing the actual design and code.</p>
+                </div>
+            </div>
+            <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+
+    <section id="projects" class="projects-section">
+        <div class="projects-header">
+            <h2 class="about-title"><b>My Projects</b></h2>
+            <div class="underline"></div>
+            <span class="year">2022-Present</span>
+        </div>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <video controls>
+                    <source src="{% static 'videos/liraya.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>TUPCLiraya</h3>
+                <p><span class="subtitle-tag">Python</span> <span class="subtitle-tag">Django</span>
+                <span class="subtitle-tag">Mysql</span> <span class="subtitle-tag">Google Vision API</span>
+                <span class="subtitle-tag">HTML</span> <span class="subtitle-tag">CSS</span>
+                <span class="subtitle-tag">Bootsrap</span> <span class="subtitle-tag">OCR</span>
+                <span class="subtitle-tag">Website</span></p>
+            </div>
+
+            <div class="project-card">
+                <video controls>
+                    <source src="{% static 'videos/findrary.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Findray</h3>
+                <p><span class="subtitle-tag">kotlin </span> <span class="subtitle-tag">Firebase</span> <span class="subtitle-tag">Mobile Application</span><span class="subtitle-tag">Google Auth</span></p>
+            </div>
+
+            <div class="project-card">
+                <video controls>
+                    <source src="{% static 'videos/bayanihire.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>BayaniHire</h3>
+                <p><span class="subtitle-tag">Python</span> <span class="subtitle-tag">Django</span>
+                <span class="subtitle-tag">HTML</span> <span class="subtitle-tag">CSS</span>
+                <span class="subtitle-tag">Web Developments</span></p>
+            </div>
+
+            <div class="project-card">
+                <video controls>
+                    <source src="{% static 'videos/mobcam.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Camera</h3>
+                 <p><span class="subtitle-tag">kotlin </span> <span class="subtitle-tag">Mobile App</span></p>
+            </div>
+
+            <div class="project-card">
+                <video controls>
+                    <source src="{% static 'videos/quizmob.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Quiz Bee</h3>
+                <p><span class="subtitle-tag">kotlin </span> <span class="subtitle-tag">Mobile App</span></p>
+            </div>
+
+            <div class="project-card">
+                <video controls>
+                    <source src="{% static 'videos/robotics.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Robotic Color Seperator</h3>
+                <p><span class="subtitle-tag">C++</span> <span class="subtitle-tag">Arduino Uno</span>
+                <span class="subtitle-tag">Robotics</span> <span class="subtitle-tag">Servo Motors</span>
+                <span class="subtitle-tag">TCS3200</span></p>
+            </div>
+
+            <div class="project-card">
+                <video controls>
+                    <source src="{% static 'videos/mobinv.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Valentines Invitation Card</h3>
+                <p><span class="subtitle-tag">Python</span> <span class="subtitle-tag">Qt Designer</span>
+                <p><span class="subtitle-tag">Pygame</span></p>
+            </div>
+
+            <div class="project-card">
+                <video controls>
+                    <source src="{% static 'videos/lyricsterminal.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Tiktok Trend-Lyrics Display</h3>
+                <p><span class="subtitle-tag">Python</span></p></p>
+            </div>
+
+            <!-- Add more project cards as needed -->
+
+        </div>
+    </section>
+
+    <section id="resume" class="resume-section">
+
+        <div class="resume-container">
+
+            <!-- LEFT BOX -->
+            <div class="resume-left">
+                <h2><b>Academic Record</b></h2>
+
+                <div class="school-record">
+                    <h3>Technological University of the Philippines – Cavite</h3>
+                    <span class="year">2022-Present</span>
+                    <p class="program"><b>Bachelor of Engineering Technology Major in Computer Engineering Technology</b></p>
+                    <ul class="achievements">
+                        <li><span class="achievement-symbol">➤</span><b>3rd Year Second Sem Dean's Lister</b></li>
+                        <li><span class="achievement-symbol">➤</span><b>2nd Year First Sem Dean's Lister</b></li>
+                        <li><span class="achievement-symbol">➤</span><b>2024-2025 Vice President</b> (ACTS - TUPC)</li>
+                    </ul>
+                </div>
+
+                <div class="school-record">
+                    <h3>Philippine Christian University - Cavite</h3>
+                    <span class="year">2020-2022</span>
+                    <p class="program"><b>Senior High School – Science, Technology, Engineering and Mathematics</b></p>
+                    <ul class="achievements">
+                        <li><span class="achievement-symbol">➤</span><b>Graduated with High Honor</b></li>
+                    </ul>
+                </div>
+
+                <div class="school-record">
+                    <h3>Bulihan Integrated National High School</h3>
+                    <span class="year">2016-2020</span>
+                    <p class="program"><b>Junior High School</b></p>
+                    <ul class="achievements">
+                        <li><span class="achievement-symbol">➤</span><b>Graduated with Honor</b></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- RIGHT BOX (BORDER) -->
+            <div class="resume-right">
+
+                <!-- SLIDER -->
+                <div class="resume-slider">
+
+                    <button class="slider-btn prev" aria-label="Previous certificate">
+                        &#10094;
+                    </button>
+
+                    <div class="slider-content">
+                        <img
+                            id="resumeImage"
+                            data-cert1="{% static 'images/cert1.png' %}"
+                            data-cert2="{% static 'images/cert2.png' %}"
+                            data-cert3="{% static 'images/cert3.png' %}"
+                            data-cert4="{% static 'images/cert4.png' %}"
+                            data-cert5="{% static 'images/cert5.png' %}"
+                            data-cert6="{% static 'images/cert6.png' %}"
+                            data-cert7="{% static 'images/cert7.png' %}"
+                            data-cert8="{% static 'images/cert8.png' %}"
+                            data-cert9="{% static 'images/cert9.png' %}"
+                            alt="Certificate"
+                        >
+                        <p id="resumeCaption"></p>
+                    </div>
+
+                    <button class="slider-btn next" aria-label="Next certificate">
+                        &#10095;
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CORRECT JS PATH -->
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
